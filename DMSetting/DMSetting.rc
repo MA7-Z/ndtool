@@ -1,0 +1,201 @@
+// Microsoft Visual C++ generated resource script.
+//
+#include "resource.h"
+
+#define APSTUDIO_READONLY_SYMBOLS
+/////////////////////////////////////////////////////////////////////////////
+//
+// Generated from the TEXTINCLUDE 2 resource.
+//
+#include "afxres.h"
+
+/////////////////////////////////////////////////////////////////////////////
+#undef APSTUDIO_READONLY_SYMBOLS
+
+/////////////////////////////////////////////////////////////////////////////
+// 日本語 resources
+
+#if !defined(AFX_RESOURCE_DLL) || defined(AFX_TARG_JPN)
+#ifdef _WIN32
+LANGUAGE LANG_JAPANESE, SUBLANG_DEFAULT
+#pragma code_page(932)
+#endif //_WIN32
+
+#ifdef APSTUDIO_INVOKED
+/////////////////////////////////////////////////////////////////////////////
+//
+// TEXTINCLUDE
+//
+
+1 TEXTINCLUDE 
+BEGIN
+    "resource.h\0"
+END
+
+2 TEXTINCLUDE 
+BEGIN
+    "#include ""afxres.h""\r\n"
+    "\0"
+END
+
+3 TEXTINCLUDE 
+BEGIN
+    "\r\n"
+    "\0"
+END
+
+#endif    // APSTUDIO_INVOKED
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Dialog
+//
+
+IDD_MAINDLG DIALOGEX 0, 0, 371, 266
+STYLE DS_SETFONT | DS_FIXEDSYS | DS_CENTER | WS_MINIMIZEBOX | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "ネットワークドライブ接続設定 - DrvMount"
+FONT 8, "MS Shell Dlg", 400, 0, 0x1
+BEGIN
+    CONTROL         "",IDC_LIST_CON,"SysListView32",LVS_REPORT | LVS_SINGLESEL | LVS_ALIGNLEFT | LVS_NOSORTHEADER | WS_BORDER | WS_TABSTOP,14,18,343,174
+    PUSHBUTTON      "自動接続開始",IDC_BUTTON_EXECSTART,14,196,72,14
+    PUSHBUTTON      "追加(&A)",IDC_BUTTON_ADD,158,196,50,14
+    PUSHBUTTON      "修正(&M)",IDC_BUTTON_UPD,208,196,50,14
+    PUSHBUTTON      "削除(&D)",IDC_BUTTON_DEL,258,196,50,14
+    PUSHBUTTON      "全削除(&E)",IDC_BUTTON_ALLDEL,308,196,50,14
+    GROUPBOX        "接続設定リスト",IDC_STATIC,7,7,357,206
+    CONTROL         "接続できないと判断した場合はエラー通知する",IDC_CHECK_ERRNOTIFY,"Button",BS_AUTOCHECKBOX | WS_TABSTOP,16,227,177,10
+    CONTROL         "スタートアップに登録する",IDC_CHECK_STARTUP,"Button",BS_AUTOCHECKBOX | NOT WS_VISIBLE | WS_DISABLED | WS_TABSTOP,240,227,116,10
+    GROUPBOX        "動作設定",IDC_STATIC,7,216,357,26
+    PUSHBUTTON      "ヘルプ",IDC_BUTTON_HELP,7,245,39,14
+    LTEXT           "Ver.0.0.0.0",IDC_STATIC_VERSION,55,250,66,9
+    PUSHBUTTON      "設定を保存",IDC_BUTTON_SAVE,136,245,76,14
+    DEFPUSHBUTTON   "保存して終了",IDOK,212,245,76,14
+    PUSHBUTTON      "保存せずに終了",IDCANCEL,288,245,76,14
+END
+
+IDD_ENTRYDLG DIALOGEX 0, 0, 307, 243
+STYLE DS_SETFONT | DS_FIXEDSYS | DS_CENTER | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "接続情報入力"
+FONT 8, "MS Shell Dlg", 400, 0, 0x1
+BEGIN
+    LTEXT           "ドライブレター :",IDC_STATIC,16,25,77,9
+    COMBOBOX        IDC_COMBO_DRIVE,111,24,44,13,CBS_DROPDOWNLIST | CBS_SORT | WS_VSCROLL | WS_TABSTOP
+    LTEXT           "パス(UNC or ローカル) :",IDC_STATIC,16,47,89,9
+    EDITTEXT        IDC_EDIT_PATH,110,45,164,13,ES_AUTOHSCROLL
+    PUSHBUTTON      "...",IDC_BUTTON_PATH,274,44,19,15
+    LTEXT           "ユーザー :",IDC_STATIC,16,69,60,9
+    EDITTEXT        IDC_EDIT_USER,110,67,100,13,ES_AUTOHSCROLL
+    LTEXT           "パスワード :",IDC_STATIC,16,91,61,9
+    EDITTEXT        IDC_EDIT_PWD,110,89,100,13,ES_PASSWORD | ES_AUTOHSCROLL
+    GROUPBOX        "接続情報",IDC_STATIC,7,7,293,106
+    LTEXT           "接続エラー時のリトライ回数 :",IDC_STATIC,16,132,105,9
+    EDITTEXT        IDC_EDIT_RETRY,121,129,34,13,ES_AUTOHSCROLL | ES_NUMBER,WS_EX_RIGHT
+    LTEXT           "回(0で無限)",IDC_STATIC,161,131,62,9
+    LTEXT           "リトライの間隔 :",IDC_STATIC,16,146,105,9
+    EDITTEXT        IDC_EDIT_RTWAIT,121,143,34,13,ES_AUTOHSCROLL | ES_NUMBER,WS_EX_RIGHT
+    LTEXT           "秒",IDC_STATIC,161,145,62,9
+    CONTROL         "自動的に接続する",IDC_CHECK_AUTOCON,"Button",BS_AUTOCHECKBOX | WS_TABSTOP,15,159,98,11
+    CONTROL         "接続されている場合は切断してから接続（強制接続）",IDC_CHECK_FORCE,"Button",BS_AUTOCHECKBOX | WS_TABSTOP,15,171,211,11
+    CONTROL         "接続に成功したら次のコマンドを実行する",IDC_CHECK_EXEC,"Button",BS_AUTOCHECKBOX | WS_TABSTOP,15,184,181,11
+    PUSHBUTTON      "今すぐ実行",IDC_BUTTON_EXECUTE,228,184,46,12
+    LTEXT           "実行コマンド :",IDC_STATIC,18,199,54,9
+    EDITTEXT        IDC_EDIT_EXECPATH,75,197,199,13,ES_AUTOHSCROLL
+    PUSHBUTTON      "...",IDC_BUTTON_EXECPATH,275,196,19,15
+    GROUPBOX        "動作設定",IDC_STATIC,7,119,293,98
+    DEFPUSHBUTTON   "OK",IDOK,199,222,50,14
+    PUSHBUTTON      "キャンセル",IDCANCEL,250,222,50,14
+END
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// DESIGNINFO
+//
+
+#ifdef APSTUDIO_INVOKED
+GUIDELINES DESIGNINFO 
+BEGIN
+    IDD_MAINDLG, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 364
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 259
+    END
+
+    IDD_ENTRYDLG, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 300
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 236
+    END
+END
+#endif    // APSTUDIO_INVOKED
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Version
+//
+
+VS_VERSION_INFO VERSIONINFO
+ FILEVERSION 1,0,2,0
+ PRODUCTVERSION 1,0,2,0
+ FILEFLAGSMASK 0x17L
+#ifdef _DEBUG
+ FILEFLAGS 0x1L
+#else
+ FILEFLAGS 0x0L
+#endif
+ FILEOS 0x4L
+ FILETYPE 0x1L
+ FILESUBTYPE 0x0L
+BEGIN
+    BLOCK "StringFileInfo"
+    BEGIN
+        BLOCK "041104b0"
+        BEGIN
+            VALUE "FileDescription", "DrvMount 接続設定ツール"
+            VALUE "FileVersion", "1, 0, 2, 0"
+            VALUE "InternalName", "DMSetting"
+            VALUE "LegalCopyright", "Copyright (C) CCC 2014 - All rights reserved."
+            VALUE "OriginalFilename", "DMSetting.exe"
+            VALUE "ProductVersion", "1, 0, 2, 0"
+        END
+    END
+    BLOCK "VarFileInfo"
+    BEGIN
+        VALUE "Translation", 0x411, 1200
+    END
+END
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Icon
+//
+
+// Icon with lowest ID value placed first to ensure application icon
+// remains consistent on all systems.
+IDI_ICON1               ICON                    "ico00003.ico"
+IDI_ONLINE1             ICON                    "icon1.ico"
+IDI_ONLINE2             ICON                    "ico00001.ico"
+IDI_OFFLINE             ICON                    "ico00002.ico"
+IDI_DISABLE             ICON                    "icon2.ico"
+#endif    // 日本語 resources
+/////////////////////////////////////////////////////////////////////////////
+
+
+
+#ifndef APSTUDIO_INVOKED
+/////////////////////////////////////////////////////////////////////////////
+//
+// Generated from the TEXTINCLUDE 3 resource.
+//
+
+
+/////////////////////////////////////////////////////////////////////////////
+#endif    // not APSTUDIO_INVOKED
+

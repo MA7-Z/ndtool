@@ -1,0 +1,26 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 9.00
+# Visual Studio 2005
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "DMSetting", "DMSetting\DMSetting.vcproj", "{002B651C-24E6-4535-A7F2-DC888C0E9FD4}"
+EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "DMStart", "DMStart\DMStart.vcproj", "{790956F1-DDA4-4C2A-BA54-191CB1E477E9}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Win32 = Debug|Win32
+		Release|Win32 = Release|Win32
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{002B651C-24E6-4535-A7F2-DC888C0E9FD4}.Debug|Win32.ActiveCfg = Debug|Win32
+		{002B651C-24E6-4535-A7F2-DC888C0E9FD4}.Debug|Win32.Build.0 = Debug|Win32
+		{002B651C-24E6-4535-A7F2-DC888C0E9FD4}.Release|Win32.ActiveCfg = Release|Win32
+		{002B651C-24E6-4535-A7F2-DC888C0E9FD4}.Release|Win32.Build.0 = Release|Win32
+		{790956F1-DDA4-4C2A-BA54-191CB1E477E9}.Debug|Win32.ActiveCfg = Debug|Win32
+		{790956F1-DDA4-4C2A-BA54-191CB1E477E9}.Debug|Win32.Build.0 = Debug|Win32
+		{790956F1-DDA4-4C2A-BA54-191CB1E477E9}.Release|Win32.ActiveCfg = Release|Win32
+		{790956F1-DDA4-4C2A-BA54-191CB1E477E9}.Release|Win32.Build.0 = Release|Win32
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal
